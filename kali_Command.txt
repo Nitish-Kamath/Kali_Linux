@@ -1,0 +1,168 @@
+Basic Commands of Kali Linux:-
+
+whoami/users->To know the user name
+who -> more info about user
+uname->machine name
+uname -r->machine name with its version
+uname -r -a ->more info in addition to uname -r
+pwd->info about working directory
+ls->list out all folders inside pwd
+ls -r->list out all files along with all folder inside pwd
+ls -R->list out all files along with all folder inside pwd in vertical fashion
+ls -a->list out allfiles/folders/hidden fumaniles inside pwd
+man command ->to know more functionality of a command
+
+#Linux is case sensitive language.
+
+cd->  change directory
+cd .. -> to move one stepback to prev folder
+lsblk->info about disk partition
+df->more info about disk partition like available/free size
+cal->shows calender
+date->shows date and more info
+wget website_name -> download the website homepage in html format in pwd
+
+#we can click on that html file to access that website
+
+mkdir ab         -> one folder with name ab is created
+mkdir a b         -> two folder with name a and b is created
+  
+touch photo.png   -> a file with name photo with file type .png is created
+touch info.txt       -> a file with name text  with file type .txt is created
+touch index.html  -> a file with name index with file type .html is created
+type > pic.jpg -> a file with name pic with file type .jpg is created
+echo hello world-> print out the statement (hello world) on the terminal screen
+
+echo hello world > to.txt   -> a file with name to with file type .txt and content hello world is created
+cat ./to.txt -> print out the content of file to.txt on screen (hello world)
+
+touch .hiddenfile ->Hidden file is exported but not showing on the screen
+#To see the hidden file use the command ls -a
+
+cp file_name path_name ->copy the file from pwd to new directory
+
+cp file_name "folder_name"-> copy the file from pwd to new directory (DOS and Powershell Method)
+
+mv file_name1 path_name ->move the file from pwd to new path
+mv file_name1 file_name2 path_name ->move both the file from pwd to new path
+mv file_name1 file_name2-> rename the file from file_name1 to file_name2
+
+
+rm file_name -> to delete a file
+rm file_name1 file_name2 -> to delete more than one file
+
+rmdir folder_name ->to delete a folder   (!!YOU CAN ONLY DELETE A FOLDER IF FOLDER IS EMPTY)
+
+
+apt-get upgrade-> To add patches to installed software(like update in smartphone)
+apt-get update-> To add extra software 
+
+ifconfig->to get ip address of your system(!!ACCESS TO ONLY ROOT USERS)
+dig google.com-> get ip of domain(as well as ip of realted server) and doamin of ip
+ps(print service) ->print all the task that is running
+top ->print all the running task along with user name,PID  and many more
+kill PID->to terminate a particular task with given PID
+figlet name-> print name in new fashion
+yes string -> run an infinite loop and print string for infinite time
+ctrl + c-> to terminate the infinite loop
+factor number->print factorial of number
+shutdown now -s->Poweroff the linux os(if not working use sudo before command)
+[!! IF YOU ARE NOT A ROOT USER THEN YOU CAN USE SUDO BEFORE COMMAND TO EXECUTE]
+shutdodwn now -r -> restart the linux os
+ 
+               DIRECTORY TREE HIERARCHY
+directory->folder
+tree -> synonymn of branching (node is synonymn of leaves)
+hierarchy-> it is like management of any folder/files
+cd /-> reaches to the starting location
+/-> indicates root user
+~ ->  indicates normal user
+clear-> clear out terminal screen
+history -> to see all the prev command
+history -c-> to clear out history
+
+
+                    TYPES OF USERS
+Admin -> root user/ super user
+standard -> normal user/standard user/regular user
+guest ->  Service user
+***************************************
+ cat \etc\passwd ->user info 
+cat \etc\shadow  ->user password
+
+cat \etc\group ->group info 
+cat \etc\gshadow ->group password
+
+adduser user_name ->to add new user 
+[!!YOU CANNOT SEE THE PASSWORD]
+
+cat /etc/passwd -> to see the username and info[!! add space after cat]
+cat etc/shadow ->  to see the password in encrypted form  :) 
+head -4 cat /etc/passwd -> to see the upperfour line of data
+tail -n 4  cat/etc/passwd -> to see bottom four line of data
+nitish:x:1001:1001:Nitish Kamath ->username:password:Uid(unique):Gid(Group):DetailedName
+
+useradd -d  /home/ -s /bin/bash/ -p 1234 guestUser ->direct command to create a user profile
+[home is the directory where all user's data will be stored like file Trash documents etc.. 
+/bin/bash is the directory where alll user's info will be stored like user_name user_password]
+
+useradd -d  /home/ -s /bin/bash/ -p 1234 guestUser ->direct command to create a user profile
+[home is the directory where all user's data will be stored like file Trash documents etc.. 
+/bin/bash is the directory where alll user's info will be stored like user_name user_password]
+
+
+groupadd gr1 -> add new group 
+cat /etc/group -> to see newly added group
+groups user_name-> to check  user_name belongs to which group
+usermod -g gr1 guestUser-> to add guestUser to group gr1 
+[!! Check spelling  usermod not usermode] 
+
+groupdel group_name -> to delete empty group
+userdel -rf user_name-> to delete a user from the system
+
+
+FILE PERMISSIONS AND USER GROUPS
+
+Ther re three types of permission:
+1.read
+2.write
+3.execute
+
+file mode and its meaning:
+--- ->no permission
+--x ->Execute
+-w-  ->Write
+-wx  ->write and execute
+r--   ->read
+r-x   ->read and execute
+rw-    ->read and write
+rwx  ->read write and execute
+
+permission and its octal number:
+read ->4
+write  ->2
+execute ->1
+ls -la->list out the files as well as its permission
+-cat1 cat2 cat3->-root_user normal_user service_user
+
+chmod +730 file_name.ext->RWE WE NO permission is given
+chmod -777 file_name.ext->to remove all permission
+
+
+Installing packages in kali Linux:-
+
+you can install packages using apt-get or 
+to clone packages from git-hub use git clone
+
+How to use vim editor:
+vim file_name.txt-> A file will be created
+i(insert)-> to write text in vim 
+Esc then :wq!->to exit the vim editor
+
+installation of packages:-
+apt-get install package_name
+
+
+
+
+
